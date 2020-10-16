@@ -14,53 +14,53 @@ let availableQuestions = [];
 
 let questions = [];
 
-//local questions.json
-// fetch("questions.json")
-//   .then(res => {
-//     return res.json();
-//   })
-//   .then(loadedQuestions => {
-//     console.log(loadedQuestions);
-//     questions = loadedQuestions;
-//     startGame();
-//   })
-//   .catch(err => {
-//     alert("Questions aren't loaded, please try again.")
-//   });
-
-//API questions
-fetch(
-  "https://opentdb.com/api.php?amount=10&category=18&difficulty=easy&type=multiple"
-)
-  .then((res) => {
+// local questions.json
+fetch("questions.json")
+  .then(res => {
     return res.json();
   })
-  .then((loadedQuestions) => {
-    console.log(loadedQuestions.results);
-    questions = loadedQuestions.results.map((loadedQuestion) => {
-      const formattedQuestion = {
-        question: loadedQuestion.question,
-      };
-
-      const answerChoices = [...loadedQuestion.incorrect_answers];
-      formattedQuestion.answer = Math.floor(Math.random() * 3) + 1;
-      answerChoices.splice(
-        formattedQuestion.answer - 1,
-        0,
-        loadedQuestion.correct_answer
-      );
-
-      answerChoices.forEach((choice, index) => {
-        formattedQuestion["choice" + (index + 1)] = choice;
-      });
-
-      return formattedQuestion;
-    });
+  .then(loadedQuestions => {
+    console.log(loadedQuestions);
+    questions = loadedQuestions;
     startGame();
   })
-  .catch((err) => {
-    alert("Questions aren't loaded, please try again.");
+  .catch(err => {
+    alert("Questions aren't loaded, please try again.")
   });
+
+//API questions
+// fetch(
+//   "https://opentdb.com/api.php?amount=10&category=18&difficulty=easy&type=multiple"
+// )
+//   .then((res) => {
+//     return res.json();
+//   })
+//   .then((loadedQuestions) => {
+//     console.log(loadedQuestions.results);
+//     questions = loadedQuestions.results.map((loadedQuestion) => {
+//       const formattedQuestion = {
+//         question: loadedQuestion.question,
+//       };
+
+//       const answerChoices = [...loadedQuestion.incorrect_answers];
+//       formattedQuestion.answer = Math.floor(Math.random() * 3) + 1;
+//       answerChoices.splice(
+//         formattedQuestion.answer - 1,
+//         0,
+//         loadedQuestion.correct_answer
+//       );
+
+//       answerChoices.forEach((choice, index) => {
+//         formattedQuestion["choice" + (index + 1)] = choice;
+//       });
+
+//       return formattedQuestion;
+//     });
+//     startGame();
+//   })
+//   .catch((err) => {
+//     alert("Questions aren't loaded, please try again.");
+//   });
 
 // hardcoded questions
 
