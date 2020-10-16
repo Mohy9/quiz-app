@@ -1,0 +1,34 @@
+[
+  {
+    "question": "Do jakeho elementu vkladame Javascript?",
+    "choice1": "<script>",
+    "choice2": "<javascript>",
+    "choice3": "<js>",
+    "choice4": "<scripting>",
+    "answer": 1
+  },
+  {
+    "question": "Jak moc si tady z toho delame prdel?",
+    "choice1": "Vubec",
+    "choice2": "Malicko",
+    "choice3": "Hodne",
+    "choice4": "Jako Tvoje mama",
+    "answer": 2
+  },
+  {
+    "question": "Java je?",
+    "choice1": "Sracka",
+    "choice2": "Lidsky odpad",
+    "choice3": "Kubuv osud",
+    "choice4": "Daviduv trest za jeho minuly zivot",
+    "answer": 3
+  },
+  {
+    "question": "otazka 4",
+    "choice1": "odpoved1",
+    "choice2": "odpoved2",
+    "choice3": "odpoved3",
+    "choice4": "odpoved4",
+    "answer": 4
+  }
+]
